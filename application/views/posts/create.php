@@ -4,54 +4,34 @@
           <div class="row">
             <div class="col-sm-6">
               <form class="row g-3">
-                <h1 class="h3 mb-3 fw-normal pt-4">Create New Account</h1>
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Email</label>
+                <h1 class="h3 mb-3 fw-normal pt-4">New Complaint</h1>
+                  <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Title</label>
                     <input type="email" class="form-control" id="inputEmail4" />
                   </div>
-                  <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label">Username</label>
-                    <input type="email" class="form-control" id="inputEmail4" />
+                  <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Discription</label>
+                   <textarea name="" id=""   class="form-control" cols="30" rows="10"></textarea>
                   </div>
                 <div class="col-md-6">
                   <label for="inputPassword4" class="form-label"
-                    >Password</label
+                    >Image 1</label
                   >
                   <input
-                    type="password"
+                    type="file"
                     class="form-control"
                     id="inputPassword4"
                   />
                 </div>
                 <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Confirm Password</label>
-                  <input type="password" class="form-control" id="inputPassword4" />
+                  <label for="inputPassword4" class="form-label">Image 2</label>
+                  <input type="file" class="form-control" id="inputPassword4" />
                 </div>
                 <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">FirstName</label>
-                  <input type="email" class="form-control" id="inputEmail4" />
+                  <label for="inputEmail4" class="form-label">Image 3</label>
+                  <input type="file" class="form-control" id="inputEmail4" />
                 </div>
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Lastname</label>
-                  <input type="email" class="form-control" id="inputEmail4" />
-                </div>
-                  <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Age / DOB</label>
-                    <input type="date" class="form-control" id="inputCity" />
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Gender</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Choose...</option>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Others</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="inputCity" />
-                  </div>
+                 
                 <div class="col-12">
                   <label for="inputAddress" class="form-label">Address</label>
                   <input
@@ -90,13 +70,16 @@
                 <div class="col-12"></div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">
-                    Create Account
+                    Send Complaint
                   </button>
                 </div>
               </form>
             </div>
-            <div class="col-sm-4"></div>
           </div>
-        </div>
+            <div class="col-sm-4">
+             
+            </div>
+          </div>
       </div>
     </div>
+</div>
