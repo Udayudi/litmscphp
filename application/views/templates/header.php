@@ -25,15 +25,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/posts">Complints</a>
+                </li>
+                <li class="nav-item">
 
                     <a class="nav-link" href="<?php echo base_url(); ?>login">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>registration">Registration</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
+               
                 
             </ul>
         </div>

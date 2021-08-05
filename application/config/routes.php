@@ -7,10 +7,9 @@ $route['officer/login'] = 'officer/officerlogin';
 
 $route['admin/login'] = 'admin/adminlogin';
 
-$route['posts/index'] = 'posts/index';
+$route['posts/(:any)'] = 'posts/view/$1';
 $route['posts/create'] = 'posts/create';
 $route['posts/update'] = 'posts/update';
-$route['posts/(:any)'] = 'posts/view/$1';
 $route['posts'] = 'posts/index';
 
 $route['default_controller'] = 'pages/view';

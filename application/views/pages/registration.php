@@ -1,9 +1,10 @@
+<?php echo form_open('users/register'); ?>
 <div class="container">
       <div class="pt-4 pb-4">
         <div class="">
           <div class="row">
             <div class="col-sm-6">
-              <form class="row g-3">
+              <div class="row g-3">
                 <h1 class="h3 mb-3 fw-normal pt-4">Create New Account</h1>
                   <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">Email</label>
@@ -93,8 +94,9 @@
                     Create Account
                   </button>
                 </div>
-              </form>
+              </div>
             </div>
+            <?php echo form_close(); ?>
             <div class="col-sm-4"></div>
           </div>
         </div>
