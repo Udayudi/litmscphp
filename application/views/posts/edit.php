@@ -6,17 +6,23 @@
 
         <?php echo validation_errors(); ?>
 
-            <?php echo form_open('posts/create'); ?>
+            <?php echo form_open('posts/update'); ?>
+
+              <input type="hidden" name="id" value="<?php echo $post['id']; ?>"  />  
+
               <div class="row g-3">
                 <h1 class="h3 mb-3 fw-normal pt-4">New Complaint</h1>
                   <div class="col-md-12">
                     <label class="form-label">Title</label>
-                    <input type="text" class="form-control" name="title" />
+                    <input type="text" class="form-control" name="title" 
+                        value="<?php echo $post['title'] ?>"
+                    />
                   </div>
                   <div class="col-md-12">
                     <label  class="form-label">Discription</label>
-                   <textarea name="body" id="editor1"  class="form-control" cols="30" rows="10">
+                   <textarea name="body"  id="editor1"  class="form-control" cols="30" rows="10">
 
+                    <?php echo $post['body'] ?>
                    </textarea>
                   </div>
                 <div class="col-md-6">

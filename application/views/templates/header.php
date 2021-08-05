@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/main.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom.css">
+    <script src="http://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
     <title>Local Issues Tracker</title>
 </head>
 <body>
@@ -25,7 +26,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/posts">Complints</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>posts">Complints</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Add New Post</a>
                 </li>
                 <li class="nav-item">
 
