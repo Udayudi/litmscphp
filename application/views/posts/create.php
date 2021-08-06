@@ -6,7 +6,7 @@
 
         <?php echo validation_errors(); ?>
 
-            <?php echo form_open('posts/create'); ?>
+            <?php echo form_open_multipart('posts/create'); ?>
               <div class="row g-3">
                 <h1 class="h3 mb-3 fw-normal pt-4">New Complaint</h1>
                   <div class="col-md-12">
@@ -21,29 +21,20 @@
                   </div>
                 <div class="col-md-6">
                   <label  class="form-label"
-                    >Image 1</label
+                    >Image Upload</label
                   >
                   <input
                     type="file"
                     class="form-control"
-                    id="inputPassword4"
+                    name="userfile"
                   />
-                </div>
-                <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Image 2</label>
-                  <input type="file" class="form-control" id="inputPassword4" />
-                </div>
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Image 3</label>
-                  <input type="file" class="form-control" id="inputEmail4" />
-                </div>
-                 
+                </div>              
                 <div class="col-12">
-                  <label for="inputAddress" class="form-label">Address</label>
+                  <label  class="form-label">Address</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="inputAddress"
+                    name="address1"
                     placeholder="1234 Main St"
                   />
                 </div>
@@ -54,24 +45,24 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="inputAddress2"
+                    name="address2"
                     placeholder="Apartment, studio, or floor"
                   />
                 </div>
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="inputCity" />
+                  <input type="text" class="form-control" name="city" />
                 </div>
                 <div class="col-md-4">
                   <label for="inputState" class="form-label">State</label>
-                  <select id="inputState" class="form-select">
+                  <select name="state" class="form-select">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    <option>Karnataka</option>
                   </select>
                 </div>
                 <div class="col-md-2">
                   <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip" />
+                  <input type="text" class="form-control" name="zipcode" />
                 </div>
                 <div class="col-12"></div>
                 <div class="col-12">

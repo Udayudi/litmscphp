@@ -10,14 +10,25 @@
             <div class="col-sm-6">
             <div class="card mb-3">
             <h3 class="card-header"><?php echo $post['title']; ?></h3>
-            <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-                <rect width="100%" height="100%" fill="#868e96"></rect>
-                <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text>
-            </svg>
+            <img 
+              src="<?php echo site_url(); ?>assets/images/posts/<?php echo $post['post_image']?>"
+            class="d-block user-select-none" width="100%" height="200" />            
+          
             <div class="card-body">
-                <p class="card-text"> <?php echo $post['body']; ?></p>
+                <p class="card-text"> <?php echo word_limiter($post['body'], 30); ?></p>
             </div>
-            
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">City : 
+                <span class="text-danger"><?php echo $post['city']; ?></span>
+              </li>
+              <li class="list-group-item">Zipcode : 
+                <span class="text-warning"><?php echo $post['zipcode']; ?></span>
+              </li>
+              <li class="list-group-item">State :
+                <span class="text-success"><?php echo $post['state']; ?></span>
+              </li>
+              
+            </ul>
             <div class="card-body">
                 <a href="<?php echo site_url('/posts/'.$post['id']); ?>" class="card-link">Read More</a>
                 <a href="#" class="card-link"></a>

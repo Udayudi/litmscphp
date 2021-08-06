@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-6">
                   <label for="inputPassword4" class="form-label">Image 2</label>
-                  <input type="file" class="form-control" id="inputPassword4" />
+                  <input type="file" class="form-control"  />
                 </div>
                 <div class="col-md-6">
                   <label for="inputEmail4" class="form-label">Image 3</label>
@@ -49,7 +49,8 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="inputAddress"
+                    value="<?php echo $post['address1'] ?>"
+                    name="address1"
                     placeholder="1234 Main St"
                   />
                 </div>
@@ -60,24 +61,25 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="inputAddress2"
+                    value="<?php echo $post['address2'] ?>"
+                    name="address2"
                     placeholder="Apartment, studio, or floor"
                   />
                 </div>
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="inputCity" />
+                  <input type="text" class="form-control" name="city"  value="<?php echo $post['city'] ?>" />
                 </div>
                 <div class="col-md-4">
                   <label for="inputState" class="form-label">State</label>
-                  <select id="inputState" class="form-select">
+                  <select name="state" class="form-select">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    <option>Karnataka</option>
                   </select>
                 </div>
                 <div class="col-md-2">
                   <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip" />
+                  <input type="text" class="form-control" name="zipcode" value="<?php echo $post['zipcode'] ?>" />
                 </div>
                 <div class="col-12"></div>
                 <div class="col-12">
