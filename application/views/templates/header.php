@@ -25,23 +25,50 @@
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
+             
+
+                <?php if(!$this->session->userdata('logged_in')) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>users/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>users/register">Registration</a>
+                    </li>
+               <?php endif; ?>
+               <?php if($this->session->userdata('logged_in')) : ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>posts">Complints</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Add New Post</a>
                 </li>
+
                 <li class="nav-item">
 
-                    <a class="nav-link" href="<?php echo base_url(); ?>login">Login</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>registration">Registration</a>
-                </li>
-               
-                
+                <?php endif; ?>
             </ul>
         </div>
     </div>
 </nav>
 <!-- End of Navbar -->
+
+<div class="container">
+<?php if($this->session->flashdata('user_registered')): ?>
+        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
+      <?php endif; ?>
+</div>
+
+<?php if($this->session->flashdata('login_failed')): ?>
+    <?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
+<?php endif; ?>
+
+<?php if($this->session->flashdata('user_loggedin')): ?>
+    <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedin').'</p>'; ?>
+<?php endif; ?>
+
+
+<?php if($this->session->flashdata('user_loggedout')): ?>
+        <?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedout').'</p>'; ?>
+      <?php endif; ?>

@@ -31,7 +31,12 @@ class Posts extends CI_Controller {
     }
 
     public function create() {
-                
+
+            // Check Login
+            if (!$this->session->userdata('logged_in')) {
+                redirect('users/login');
+            }
+
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('body', 'Body', 'required');
             $this->form_validation->set_rules('address1', 'Address 1', 'required');
@@ -69,6 +74,12 @@ class Posts extends CI_Controller {
     }
 
     public function delete($id) {
+
+          // Check Login
+          if (!$this->session->userdata('logged_in')) {
+            redirect('users/login');
+        }
+
         // echo $id;   
 
         $this->post_model->delete_post($id);
@@ -76,6 +87,12 @@ class Posts extends CI_Controller {
     }
 
     public function edit($id) {
+
+          // Check Login
+          if (!$this->session->userdata('logged_in')) {
+            redirect('users/login');
+        }
+
         $data['post'] = $this->post_model->get_posts($id);
 
         //  print_r ($data['post']);
@@ -92,6 +109,12 @@ class Posts extends CI_Controller {
     }
 
     public function update() {
+
+          // Check Login
+          if (!$this->session->userdata('logged_in')) {
+            redirect('users/login');
+        }
+
        $this->post_model->update_post();
        redirect('posts');
     }

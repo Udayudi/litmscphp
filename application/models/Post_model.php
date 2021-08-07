@@ -42,7 +42,7 @@
             return true;
         }
 
-        public function update_post($post_image){
+        public function update_post(){
         //    echo $this->input->post('id');
         //    die();
 
@@ -57,7 +57,6 @@
                 'city'	=> $this->input->post('city'),
                 'state'	=> $this->input->post('state'),
                 'zipcode'	=> $this->input->post('zipcode'),
-                'post_image' => $post_image	
             );
 
             $this->db->where('id', $this->input->post('id'));

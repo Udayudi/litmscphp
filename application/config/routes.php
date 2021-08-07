@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
+$route['users/register'] = 'users/register';
 
 $route['officer/login'] = 'officer/officerlogin';
 

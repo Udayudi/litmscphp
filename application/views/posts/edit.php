@@ -6,7 +6,7 @@
 
         <?php echo validation_errors(); ?>
 
-            <?php echo form_open('posts/update'); ?>
+            <?php echo form_open_multipart('posts/update'); ?>
 
               <input type="hidden" name="id" value="<?php echo $post['id']; ?>"  />  
 
@@ -27,22 +27,16 @@
                   </div>
                 <div class="col-md-6">
                   <label  class="form-label"
-                    >Image 1</label
+                    >Image Upload</label
                   >
                   <input
                     type="file"
                     class="form-control"
-                    id="inputPassword4"
+                    name="userfile"
+                    
                   />
                 </div>
-                <div class="col-md-6">
-                  <label for="inputPassword4" class="form-label">Image 2</label>
-                  <input type="file" class="form-control"  />
-                </div>
-                <div class="col-md-6">
-                  <label for="inputEmail4" class="form-label">Image 3</label>
-                  <input type="file" class="form-control" id="inputEmail4" />
-                </div>
+                
                  
                 <div class="col-12">
                   <label for="inputAddress" class="form-label">Address</label>
